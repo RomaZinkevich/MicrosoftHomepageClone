@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/42cf64e348.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/42cf64e348.js" crossorigin="anonymous"></script>
     <title>Microsoft Homepage</title>
 </head>
 <body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x">
+
+        </i>
+    </div>
+
     <div class="container">
         <header class="menu">
-            <div class="menu-left">
-                <img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft logo">
-                <a href="#">Office</a>
-                <a href="#">Windows</a>
-                <a href="#">Surface</a>
-                <a href="#">Xbox</a>
-                <a href="#">Deals</a>
-                <a href="#">Support</a>
-            </div>
+            <img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft logo">
+            <ul class="menu-left">
+                <li><a href="#">Office</a></li>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">Surface</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
             <div class="menu-right">
                 <a href="#">
                     <i class="fas fa-search"></i>
@@ -212,7 +218,10 @@
         </div>
       </footer>
 
-
-    
+      <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.menu-left').classList.toggle('show');
+        });
+      </script>
 </body>
 </html>

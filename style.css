@@ -39,6 +39,16 @@ p{
     line-height: 25px;
 }
 
+/* Menu-button */
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display:none;
+}
+
 /* Header */
 
 .menu {
@@ -60,9 +70,11 @@ p{
 }
 
 .menu-left {
+    flex:1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 2;
 }
 
 /* Showcase */
@@ -262,9 +274,50 @@ p{
 }
 
 @media(max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
+
+    .menu .menu-right {
+        margin-right: 50px;
+    }
+
+    .menu ul.menu-left {
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu ul.menu-left li {
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;;
+    }
+
+    .menu ul.menu-left li:last-child {
+        border-bottom: 0;
+    }
+
+    .menu ul.menu-left.show {
+        transform: translateX(-20px);
+    }
+
     .home-cards {
         grid-template-columns: repeat(2, 1fr);
-    } 
+    }
 
     .xbox-content p {
         display: none;
